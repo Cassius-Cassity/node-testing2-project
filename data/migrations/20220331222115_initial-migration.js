@@ -4,7 +4,7 @@ await knex.schema
     .createTable('pokemon', table => {
         table.increments('poke_id')
         table.string('name', 107).notNullable().unique()
-        table.string('type', 107).notNullable().unique()
+        table.string('type', 107).notNullable()
     })
 
 };
